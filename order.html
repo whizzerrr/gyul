@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문하기 - 제주 감귤</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">제주 감귤</a>
+            <ul class="nav-links">
+                <li><a href="index.html">상품 정보</a></li>
+                <li><a href="order.html" class="active">주문하기</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="order-section">
+            <h1>주문하기</h1>
+
+            <form id="orderForm" class="order-form">
+                <div class="form-group">
+                    <h2>주문 상품</h2>
+                    <div class="product-summary">
+                        <span class="product-name">제주 노지 감귤 (5kg)</span>
+                        <span class="product-price">15,000원</span>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <label for="quantity">수량 (박스)</label>
+                        <div class="quantity-control">
+                            <button type="button" id="decreaseBtn" class="qty-btn">-</button>
+                            <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" readonly>
+                            <button type="button" id="increaseBtn" class="qty-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="total-price">
+                        <span>총 결제 금액</span>
+                        <span id="totalPrice" class="total-amount">15,000원</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h2>구매자 정보</h2>
+
+                    <div class="input-group">
+                        <label for="name">이름 *</label>
+                        <input type="text" id="name" name="name" placeholder="홍길동" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phone">전화번호 *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="address">배송 주소 *</label>
+                        <input type="text" id="address" name="address" placeholder="서울시 강남구 테헤란로 123" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="addressDetail">상세 주소</label>
+                        <input type="text" id="addressDetail" name="addressDetail" placeholder="101동 202호">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="memo">배송 메모</label>
+                        <textarea id="memo" name="memo" placeholder="배송 시 요청사항을 입력해주세요"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">주문하기</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 제주 감귤 농장. All rights reserved.</p>
+        <p>문의: 010-1234-5678 | jeju-gyul@example.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
